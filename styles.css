@@ -1,0 +1,163 @@
+
+    /* ===== Base (as in your file) ===== */
+    body { font-family: Arial, sans-serif; background:#f7f7f7; margin:20px; }
+    .card { background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin:20px auto; width:95%; max-width:1400px; }
+    h2 { margin:0 0 12px; }
+    label { font-weight:600; display:inline-block; margin:8px 0 4px; }
+    input, select, button { padding:8px; font-size:14px; }
+    input, select { border:1px solid #ccc; border-radius:6px; }
+    input[type="number"] { text-align:center; }
+    .row { display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+    .row > div { flex:1 1 220px; }
+
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th, td { border:1px solid #e3e3e3; padding:8px; text-align:center; }
+    th { background:#f0f0f0; }
+    tfoot td { font-weight:700; background:#fafafa; }
+
+    .btn { border:none; border-radius:8px; cursor:pointer; font-weight:700; }
+    .btn-add { background:#28a745; color:#fff; }
+    .btn-submit { background:#007bff; color:#fff; }
+    .btn-del { background:#ffeded; color:#c00; border:1px solid #ffd2d2; border-radius:6px; padding:4px 10px; }
+    .btn-secondary { background:#6c757d; color:#fff; }
+    .btn-warning { background:#ffc107; color:#000; }
+    .btn-info { background:#17a2b8; color:#fff; }
+    .btn-success { background:#28a745; color:#fff; }
+    .btn:disabled { opacity:.6; cursor:not-allowed; }
+
+    #status, #reportStatus, #ai_status { margin-top:10px; font-weight:700; color:#333; }
+
+    .report-table th { background:#f2f2f2; }
+    .report-block { page-break-inside:avoid; margin-bottom:1.35em; }
+    .report-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+    .report-title { text-align:center; font-weight:bold; font-size:24px; flex:1; }
+    .report-left strong, .report-right strong { font-size:20px; }
+    .report-table, .report-table th, .report-table td { font-size:20px; padding:10px; border:1.5px solid #000; }
+    .report-table th, .report-table td { font-weight:700; }
+    #reportOutput table, #reportOutput th, #reportOutput td { border:1.5px solid #000; }
+    .report-gap-row { height:24px; }
+    .report-table th { line-height:1.15; padding-top:8px; padding-bottom:8px; }
+
+    .full-divider { border:0; border-top:2px solid #000; width:100%; margin:8px 0 4px; }
+
+    .stamp { text-align:right; font-weight:bold; margin-top:0.8em; line-height:1.25; }
+    .stamp .sign-img { display:block; height:60px; margin:0 0 6px auto; object-fit:contain; }
+    .stamp .stamp-line { margin:2px 0; display:block; }
+    .stamp .stamp-line, .stamp .inspector-name, .stamp .inspector-title, .stamp .mandi-name { font-size:16px; }
+
+    .chip { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:16px; border:1px solid #ddd; margin:4px; background:#fafafa; }
+
+    .fixed-cell, input[readonly] { background:#f5f5f5; color:#555; }
+    input.rowTotalBags, input.rowTotalWeight { text-align:center; font-weight:600; }
+
+    .field-error { outline:2px solid #e74c3c; background:#fff3f3; }
+
+    #ai_lock_note { color:#a15; font-size:12px; display:none; }
+
+    .report-table th.col-firm,
+    .report-table td.cell-firm {
+      white-space: nowrap;
+      max-width: 40vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+    .report-table th.col-sn,
+    .report-table td.col-sn,
+    .report-table th.col-date,
+    .report-table td.col-date,
+    .report-table th.col-num,
+    .report-table td.col-num,
+    .report-table th.col-amt,
+    .report-table td.col-amt { white-space: nowrap; width: 1%; }
+
+    /* ===== AUTH (existing utility) ===== */
+    .auth-status { margin-top:8px; font-weight:700; }
+    .auth-muted { color:#666; font-size:12px; }
+    .hide { display:none !important; }
+
+    /* Login/Register toggle switch */
+    .auth-toggle { display:flex; gap:12px; align-items:center; margin:8px 0 16px; }
+    .switch { display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none; }
+    .switch input { width:42px; height:22px; appearance:none; background:#ddd; border-radius:999px; position:relative; outline:none; transition:.2s; }
+    .switch input:checked { background:#4caf50; }
+    .switch input::after { content:""; position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#fff; transition:.2s; }
+    .switch input:checked::after { left:23px; }
+
+    /* Top bar after login */
+    #appTopBar { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#fff; border-radius:10px; padding:10px 14px; box-shadow:0 2px 10px rgba(0,0,0,.08); margin:20px auto; width:95%; max-width:1400px; }
+    .user-chip { display:flex; gap:10px; align-items:center; font-weight:700; }
+    .user-role { padding:2px 8px; border-radius:6px; background:#dde; font-weight:600; }
+
+    /* Role toggle pill (Admin view) */
+    .role-toggle { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#f3f3f3; font-weight:700; }
+    .role-toggle input { width:42px; height:22px; }
+
+    /* ===== Enhancements you asked for (auth card only) ===== */
+    /* Center + cap width for the login/register card */
+    #authCard{
+      position: relative;     /* anchor for the top-right label */
+      max-width: 420px;
+      width: 92%;
+      margin: 60px auto;
+      border-radius: 14px;
+      box-shadow: 0 16px 48px rgba(2,6,23,.10);
+    }
+    /* Top-right status pill */
+    #authModeLabel{
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #2563eb;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 6px;
+      padding: 4px 10px;
+    }
+    /* Make buttons always clickable above any overlays */
+    .btn, .auth-action, .action-cell { position: relative; z-index: 5; }
+    .auth-card-wrap { overflow: visible; }
+    /* Touch-friendly inputs in auth card */
+    .auth-card-wrap .field input,
+    .auth-card-wrap .field select { min-height:44px; font-size:16px; }
+
+    /* Print rules (unchanged except ensure auth hidden) */
+    @media print {
+      @page { size: A4 portrait; margin:10mm; }
+      body { background:#fff; margin:0; }
+      .card { box-shadow:none; margin:0; padding:20px; }
+      table, th, td { border:1.5px solid #000 !important; }
+      th { background:#eee !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+      tr, td, th { page-break-inside:avoid !important; page-break-after:auto; }
+      .report-block { page-break-inside:avoid; page-break-before:auto; }
+      .mandi-section { page-break-before:always; }
+      .mandi-section.first { page-break-before:auto; }
+      .btn, #status, #reportStatus, #assignInspectorCard, #authCard, #adminBar { display:none !important; }
+      .report-table td.cell-firm,
+      .report-table th.col-firm { white-space: normal !important; overflow-wrap: anywhere; word-break: break-word; text-align: center; }
+    }
+
+    /* Small-screen refinements */
+    @media (max-width:480px){
+      #authCard { margin: 40px auto 24px; padding: 24px; }
+      .row { gap: 12px; }
+      .row > div { flex: 1 1 100%; }
+    }
+  
+/* ===== LOGIN POLISH (scoped to #authCard only) ===== */
+#authCard{max-width:460px;width:92%;margin:48px auto;border-radius:14px;box-shadow:0 16px 48px rgba(2,6,23,.10);}
+#authCard .row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;}
+#authCard .field{display:flex;flex-direction:column;gap:6px;flex:1 1 260px;min-width:220px;}
+#authCard .field label{margin:0;font-weight:600;}
+#authCard .field input,#authCard .field select{width:100%;box-sizing:border-box;min-height:44px;font-size:16px;padding:8px 12px;border:1px solid #cbd5e1;border-radius:8px;outline:none;}
+#authCard .field input:focus,#authCard .field select:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,.15);}
+#authCard .action-cell{flex:0 0 auto;display:flex;align-items:flex-end;}
+@media (max-width:640px){
+  #authCard{margin:32px auto;padding:20px;}
+  #authCard .row>div{flex:1 1 100%;min-width:0;}
+  #authCard .action-cell{width:100%;}
+  #authCard .action-cell button{width:100%;}
+}
+
